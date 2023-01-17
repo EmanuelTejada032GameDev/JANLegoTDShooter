@@ -7,8 +7,6 @@ public class Enemy : MonoBehaviour
     private Transform _playerTransform;
     [SerializeField]private float _speed = 4f;
 
-    [SerializeField] private int health = 5;
-
     private void Awake()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -24,12 +22,6 @@ public class Enemy : MonoBehaviour
         {
             ChasePlayer();
         }
-    }
-
-    public void TakeDamage()
-    {
-        health--;
-        if(health <= 0) Destroy(gameObject);
     }
 
     private void ChasePlayer()
