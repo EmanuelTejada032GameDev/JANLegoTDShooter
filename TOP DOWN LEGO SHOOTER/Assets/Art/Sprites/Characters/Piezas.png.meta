@@ -12,7 +12,7 @@ TextureImporter:
     fadeOut: 0
     borderMipMap: 0
     mipMapsPreserveCoverage: 0
-    alphaTestReferenceValue: 0.5
+    alphaTestReferenceValue: -0.63
     mipMapFadeDistanceStart: 1
     mipMapFadeDistanceEnd: 3
   bumpmap:
@@ -44,10 +44,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 275
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -68,8 +68,8 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
+    resizeAlgorithm: 1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -130,9 +130,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 360
-        y: 698
+        y: 697
         width: 389
-        height: 202
+        height: 203
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,9 +150,9 @@ TextureImporter:
       name: Piezas_2
       rect:
         serializedVersion: 2
-        x: 834
+        x: 833
         y: 794
-        width: 85
+        width: 87
         height: 133
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -194,7 +194,7 @@ TextureImporter:
         serializedVersion: 2
         x: 594
         y: 480
-        width: 143
+        width: 144
         height: 152
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -213,9 +213,9 @@ TextureImporter:
       name: Piezas_5
       rect:
         serializedVersion: 2
-        x: 834
+        x: 833
         y: 545
-        width: 86
+        width: 87
         height: 133
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -297,9 +297,9 @@ TextureImporter:
       name: Piezas_9
       rect:
         serializedVersion: 2
-        x: 531
+        x: 530
         y: 164
-        width: 70
+        width: 71
         height: 207
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -342,7 +342,7 @@ TextureImporter:
         x: 755
         y: 310
         width: 94
-        height: 44
+        height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -360,9 +360,9 @@ TextureImporter:
       name: Piezas_12
       rect:
         serializedVersion: 2
-        x: 821
+        x: 820
         y: 174
-        width: 69
+        width: 71
         height: 162
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -381,9 +381,9 @@ TextureImporter:
       name: Piezas_13
       rect:
         serializedVersion: 2
-        x: 862
+        x: 861
         y: 324
-        width: 108
+        width: 109
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}

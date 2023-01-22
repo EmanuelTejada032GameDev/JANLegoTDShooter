@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthSystem : MonoBehaviour
+public class TestingScript : MonoBehaviour
 {
     [SerializeField] private int _currentHealth = 0, _maxHealth = 0;
     [SerializeField] private HealthBar _healthBar;
-
-    [SerializeField] private bool _hasHealthBar;
 
     private void Awake()
     {
@@ -17,25 +15,17 @@ public class HealthSystem : MonoBehaviour
     private void Start()
     {
         _healthBar.StartupHealthBarConfig(_currentHealth);
+        StartCoroutine(Decreasehealth());
     }
 
-    public void Heal(int healthAmount)
+    IEnumerator Decreasehealth()
     {
-        _currentHealth += healthAmount;
-
-        if (_hasHealthBar)
-            _healthBar.SetHealth(_currentHealth);
-    }
-
-    public void TakeDamage(int damageAmount)
-    {
-
-        _currentHealth -= damageAmount;
+        Debug.Log($"Current heallth {_currentHealth}, Max health {_maxHealth}");
+        yield return new WaitForSeconds(2);
+        _currentHealth--;
         _healthBar.SetHealth(_currentHealth);
-
-        if (_currentHealth <= 0)
-        {
-            Destroy(gameObject);
-        }
+        if(_currentHealth > 0)
+            StartCoroutine(Decreasehealth());
     }
+
 }

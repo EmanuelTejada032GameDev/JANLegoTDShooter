@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    private float _moveSpeed = 5f;
+    private float _moveSpeed = 15f;
     private Rigidbody2D _rigidBody2D;
     [SerializeField]private Weapon _weapon;
 

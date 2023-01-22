@@ -6,7 +6,7 @@ public class Weapon : MonoBehaviour
 {
     [SerializeField] private GameObject _bulletPrefab; 
     [SerializeField] private Transform _firePoint;
-    private float _fireForce = 20f;
+    private float _fireForce = 70f;
 
     public void Fire()
     {
