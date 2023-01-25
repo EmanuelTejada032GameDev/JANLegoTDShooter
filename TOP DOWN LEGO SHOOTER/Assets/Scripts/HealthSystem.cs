@@ -38,4 +38,13 @@ public class HealthSystem : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void TakeConstantDamage()
+    {
+        _currentHealth -= 1;
+        if (_currentHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 }

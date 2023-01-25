@@ -32,4 +32,13 @@ public class Enemy : MonoBehaviour
             transform.position += (Vector3)direction.normalized * _speed * Time.deltaTime;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            HealthSystem playerHealthSystem = collision.GetComponent<HealthSystem>();
+            playerHealthSystem.TakeConstantDamage();
+        }
+    }
 }
