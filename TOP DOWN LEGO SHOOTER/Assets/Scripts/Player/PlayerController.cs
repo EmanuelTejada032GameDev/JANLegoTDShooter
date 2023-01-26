@@ -38,7 +38,6 @@ public class PlayerController : MonoBehaviour
         _moveDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Fire Pressed");
             // Change to attack , since melee wepon does not fire
             _weapon.Fire();
         }
@@ -46,7 +45,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             // Logic to fire with holding mouse button
-            Debug.Log("Fire held");
         }
 
         _mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
