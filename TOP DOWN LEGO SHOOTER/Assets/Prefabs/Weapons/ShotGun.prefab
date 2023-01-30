@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5455477664241842949}
   - component: {fileID: 5455477664241842948}
   - component: {fileID: 168739660982203104}
+  - component: {fileID: -1456465104445611896}
   m_Layer: 3
   m_Name: ShotGun
   m_TagString: Weapon
@@ -105,7 +106,7 @@ MonoBehaviour:
   - {fileID: 5455477664800341802}
   - {fileID: 5455477666280547409}
   - {fileID: 5455477664352790134}
-  Range: 0.3
+  Range: 0.6
 --- !u!70 &168739660982203104
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -122,6 +123,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 2.3900006, y: 8.630002}
   m_Direction: 0
+--- !u!114 &-1456465104445611896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5455477664241842955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306b2ec9db7eb504cb32df2ac865f9e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dropChance: 30
 --- !u!1 &5455477664352790135
 GameObject:
   m_ObjectHideFlags: 0

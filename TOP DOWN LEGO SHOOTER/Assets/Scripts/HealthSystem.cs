@@ -6,8 +6,10 @@ public class HealthSystem : MonoBehaviour
 {
     [SerializeField] private int _currentHealth = 0, _maxHealth = 0;
     [SerializeField] private HealthBar _healthBar;
+    [SerializeField] private LootBag _lootBag;
 
     [SerializeField] private bool _hasHealthBar;
+    [SerializeField] private bool _hasLootBag;
 
     private void Awake()
     {
@@ -35,6 +37,10 @@ public class HealthSystem : MonoBehaviour
 
         if (_currentHealth <= 0)
         {
+            if (_hasLootBag)
+            {
+                _lootBag.DropLoot();
+            }
             Destroy(gameObject);
         }
     }
@@ -44,6 +50,10 @@ public class HealthSystem : MonoBehaviour
         _currentHealth -= 1;
         if (_currentHealth <= 0)
         {
+            if (_hasLootBag)
+            {
+                _lootBag.DropLoot();
+            }
             Destroy(gameObject);
         }
     }

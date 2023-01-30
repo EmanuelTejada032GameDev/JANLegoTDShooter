@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    private float _moveSpeed = 15f;
+    private float _moveSpeed = 20f;
     private Rigidbody2D _rigidBody2D;    
     [SerializeField] private Weapon _weapon;
 
@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
    {
         //Horrible code need to be fix in here
 
-        string cleanedName = weaponPrefab.name.Split(" ")[0];
+        string cleanedName = weaponPrefab.name.Split("(")[0].Trim();
 
         switch (cleanedName)
         {
