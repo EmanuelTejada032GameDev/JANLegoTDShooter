@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _rigidBody2D;    
     [SerializeField] private Weapon _weapon;
 
+    [SerializeField] private AudioSource _footStepAudioSource;
+
     //Horrible weapon setup needs to be fix to better architecture 
 
     // BodyPrefabs
@@ -36,15 +38,26 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         _moveDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        if(_moveDirection != Vector2.zero)
+        {
+            if (!_footStepAudioSource.isPlaying)
+            {
+                _footStepAudioSource.PlayDelayed(.2f);
+            }
+        }
+        else
+        {
+            _footStepAudioSource.Stop();
+        }
         if (Input.GetMouseButtonDown(0))
         {
-            // Change to attack , since melee wepon does not fire
             _weapon.Fire();
         }
 
-        if (Input.GetMouseButton(0))
+        
+        if (Input.GetMouseButton(0) && _weapon.isAutomatic)
         {
-            // Logic to fire with holding mouse button
+            _weapon.Fire();
         }
 
         _mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -102,4 +115,5 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
+
 }

@@ -1,8 +1,9 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject _enemyPrefab;
+    [SerializeField] private List<GameObject> _possibleEnemiesPrefabs;
     [SerializeField] private Transform[] _spawnPoints;
 
     private float _spwanTimer = 0.0f;
@@ -21,6 +22,6 @@ public class EnemySpawner : MonoBehaviour
     void SpawnEnemy()
     {
         Transform spawnPoint = _spawnPoints[Random.Range(0, _spawnPoints.Length)];
-        Instantiate(_enemyPrefab, spawnPoint.position, Quaternion.identity);
+        Instantiate(_possibleEnemiesPrefabs[Random.Range(0, _possibleEnemiesPrefabs.Count)], spawnPoint.position, Quaternion.identity);
     }
 }

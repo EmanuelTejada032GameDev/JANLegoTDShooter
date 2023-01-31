@@ -141,11 +141,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentHealth: 0
-  _maxHealth: 10
+  _maxHealth: 22
   _healthBar: {fileID: 6928791977027555418}
   _lootBag: {fileID: 3366805410992238739}
   _hasHealthBar: 1
   _hasLootBag: 1
+  _isEnemy: 1
+  _enemyValue: 20
 --- !u!114 &3366805410992238739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,7 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _possibleDrops:
   - {fileID: 5555365717059065679, guid: 696ca2f5a23361946826f2cdaffb60c9, type: 3}
-  - {fileID: 5455477664241842955, guid: 8c80508e4bd5fc8419e4562b485377e3, type: 3}
+  - {fileID: 6956883538601202656, guid: b9cc194544952754696b09d9b2945899, type: 3}
 --- !u!1001 &8649015501998273348
 PrefabInstance:
   m_ObjectHideFlags: 0

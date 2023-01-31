@@ -10,6 +10,9 @@ public class HealthSystem : MonoBehaviour
 
     [SerializeField] private bool _hasHealthBar;
     [SerializeField] private bool _hasLootBag;
+    [SerializeField] private bool _isEnemy;
+
+    [SerializeField] private int _enemyValue;
 
     private void Awake()
     {
@@ -37,6 +40,10 @@ public class HealthSystem : MonoBehaviour
 
         if (_currentHealth <= 0)
         {
+            if (_isEnemy)
+            {
+                UIManager.Instance.UpdateEnemiesKilled(_enemyValue);
+            }
             if (_hasLootBag)
             {
                 _lootBag.DropLoot();
