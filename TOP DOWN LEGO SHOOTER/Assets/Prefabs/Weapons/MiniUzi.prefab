@@ -137,7 +137,7 @@ MonoBehaviour:
   - {fileID: 5555365717048844637}
   isAutomatic: 1
   Range: 1
-  timeBetweenShots: 0.2
+  timeBetweenShots: 0.13
   _shootAudioSource: {fileID: 3791640225985471522}
 --- !u!70 &2336205644389785901
 CapsuleCollider2D:
@@ -180,7 +180,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ca54ac9687cc5b04fbfbb81968f94430, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.344
+  m_Volume: 0.29
   m_Pitch: 1
   Loop: 0
   Mute: 0

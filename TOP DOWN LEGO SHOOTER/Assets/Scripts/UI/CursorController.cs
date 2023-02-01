@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CursorController : MonoBehaviour
 {
+
     private void Awake()
     {
         Cursor.visible = false;
@@ -15,4 +17,6 @@ public class CursorController : MonoBehaviour
     {
         transform.position = Input.mousePosition;
     }
+
+    
 }

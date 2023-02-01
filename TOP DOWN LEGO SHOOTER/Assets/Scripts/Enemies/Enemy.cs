@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour
 {
     private Transform _playerTransform;
     [SerializeField]private float _speed = 4f;
+    [SerializeField] private AudioSource _enemiesAttackSound;
+
 
     private void Awake()
     {
@@ -37,6 +39,7 @@ public class Enemy : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            _enemiesAttackSound.Play();
             HealthSystem playerHealthSystem = collision.GetComponent<HealthSystem>();
             playerHealthSystem.TakeConstantDamage();
         }

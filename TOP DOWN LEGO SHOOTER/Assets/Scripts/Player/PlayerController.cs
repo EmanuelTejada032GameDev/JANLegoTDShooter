@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Weapon _weapon;
 
     [SerializeField] private AudioSource _footStepAudioSource;
+    [SerializeField] private AudioSource _weaponPickupAudioSource;
 
     //Horrible weapon setup needs to be fix to better architecture 
 
@@ -111,7 +112,16 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.CompareTag("Weapon"))
         {
+            
             EquipWeapon(collision.gameObject);
+            _weaponPickupAudioSource.Play();
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.CompareTag("HearthPickup"))
+        {
+            gameObject.GetComponent<HealthSystem>().Heal(1);
+
             Destroy(collision.gameObject);
         }
     }

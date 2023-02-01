@@ -33,4 +33,10 @@ public class UIManager : MonoBehaviour
         _enemiesKilledText.text = (_enemiesKilledValue).ToString();
     }
 
+    public int GetEnemiesKilled()
+    {
+        return _enemiesKilledValue;
+    }
+
+
 }

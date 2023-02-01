@@ -104,6 +104,7 @@ MonoBehaviour:
   _bulletPrefab: {fileID: 7188494488975490969, guid: 00dc57bb4fa70d742bdfdc7fcfac02ef, type: 3}
   _firePoints:
   - {fileID: 6956883538979074784}
+  isAutomatic: 0
   Range: 0.8
   timeBetweenShots: 0.2
   _shootAudioSource: {fileID: -9128526892683275302}
@@ -135,7 +136,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 7502033e2a8d8e84e91d996eefde9c49, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.377
+  m_Volume: 0.28
   m_Pitch: 0.47
   Loop: 0
   Mute: 0
